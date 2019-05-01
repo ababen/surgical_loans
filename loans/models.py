@@ -1,6 +1,7 @@
 import datetime
 
 from django.db import models
+from borrowers.models import Borrower
 
 class Loans(models.Model):
     loan_name = models.CharField(max_length=200)
@@ -11,6 +12,7 @@ class Loans(models.Model):
     application_fee = models.DecimalField(max_digits=6, decimal_places=2)
     case_fee = models.DecimalField(max_digits=6, decimal_places=2)
     incident_date = models.DateField()
+    fk_borrowers = models.ForeignKey(Borrower, verbose_name=("Borrowers"), on_delete=models.PROTECT)
 
     def recent_loans(self):
         return self.loan_name >= datetime.now() - datetime.timedelta(days=1)
