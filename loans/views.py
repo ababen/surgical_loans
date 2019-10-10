@@ -18,3 +18,4 @@ class LoansList(generics.ListCreateAPIView):
 class LoanDetail(generics.RetrieveDestroyAPIView):
     queryset = Loans.objects.all()
     serializer_class = LoansSerializer
+    
