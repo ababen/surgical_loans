@@ -7,8 +7,8 @@ These type of loans are given to victims involved in a personal injury lawsuit s
 ## How Personal Injury Lien Holders Track
 
 Personal Injury Loans or Liens need to be tracked by the financial instituion issuing the loans. Primarily these lenders need to know the following:
-* Who did they issue a long to
-* How much did they lend
+* Who did they issue a loan to
+* How much did they lend and when
 * What is the interest accumulated on the amount lend out
 
 Tracking these expeneses in Excel is an obvious option. The challange comes with following up regarding these loans to find out the status of the underlying litigation. These status follow ups often involve calling or emailing the law firm which is litigating the accident. These law firms do not have an incentive to answer the request as they are employed by the borrower and not the lender. Furthermore, these loans often limit the law firms ability to negotiate settlements as these loans have to be paid back prior to borrower receiving any money.
@@ -20,3 +20,27 @@ There are several software options available. Many are proprietary systems build
 ## Offering A Truely Free Alternative
 
 I started this Django repo to build a free alternative for Personal Injury Lien Holders. 
+
+Here are the Classes necessary:
+
+### Borrowers
+
+This is where borrower information is stored. The following information is required:
+* Name
+* Address
+* Contact Information
+* Date of Birth
+* Social Security Number
+* etc
+
+### Loan
+
+The following information is tracked on each loan. A borrower can have multiple loans, either from one accident or multiple accidents.
+
+* Loan Date
+* Loan Amount
+* Loan Interest Rate
+* Law firm name which acknowledged the lien
+* Attorney name which acknowledged the lien
+* Law firm/Attorney contact information
+
